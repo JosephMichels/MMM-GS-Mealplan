@@ -1,7 +1,7 @@
 /* global Module */
 
 /* Magic Mirror
- * Module: MMM-GameCountdown
+ * Module: MMM-GS-Mealplan
  *
  * By
  * MIT Licensed.
@@ -41,9 +41,7 @@ Module.register("MMM-GS-Mealplan", {
 			this.updateDom();
 		}
 	},
-	getDom: function() { //Creating initial div
-	
-	
+	getDom: function() { 
 		var wrapper = document.createElement("div");
 		wrapper.classList.add("wrapper");
 
