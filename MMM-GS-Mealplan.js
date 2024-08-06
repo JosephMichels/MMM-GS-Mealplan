@@ -45,11 +45,11 @@ Module.register("MMM-GS-Mealplan", {
 		var wrapper = document.createElement("div");
 		wrapper.classList.add("wrapper");
 
-		if (this.result !== null) {
-            wrapper.innerHTML = `
-                <header class="module-header">${this.config.title}</header>
-            `
-        }    
+		if(this.result == null){
+			return wrapper;
+		}
+
+		wrapper.innerHTML = `<header class="module-header">${this.config.title}</header>`
 
 		for(meal of this.result){
 			var d = moment(meal.Date);
@@ -61,7 +61,7 @@ Module.register("MMM-GS-Mealplan", {
 		return wrapper;
 	},
 	getStyles: function() {
-		return [this.file('MMM-Mealplan.css')]
+		return [this.file('MMM-GS-Mealplan.css')]
 	},
 	
 	getData: function(){

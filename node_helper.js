@@ -17,6 +17,10 @@ module.exports = NodeHelper.create({
       const parser = new PublicGoogleSheetsParser(sheetId);
       parser.setOption({useFormat: true, sheetName:sheetName});
       parser.parse().then(data => {
+        data.forEach(e => {
+          if(e.Meal === undefined)
+            e.Meal = "No Plans";
+        });
         self.sendSocketNotification('DATA_RESULT', data);
       });
     }
