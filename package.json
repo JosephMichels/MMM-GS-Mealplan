@@ -1,0 +1,12 @@
+{
+  "name": "MMM-Splat3",
+  "version": "1.0.0",
+  "description": "Todo: Insert description here!",
+  "main": "MMM-DailyPokemon.js",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "request": "latest",
+    "public-google-sheets-parser": "1.5.4"
+  }
+}
